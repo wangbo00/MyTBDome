@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#f00"
+        android:id="@+id/ll_top"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_zxing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_normal_code" />
+
+        <EditText
+            android:id="@+id/et_seek"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="3dp"
+            android:hint="请输入搜索商品"
+            android:paddingTop="10dp" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="搜索" />
+
+        <ImageView
+            android:id="@+id/img_news"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_normal_message" />
+    </LinearLayout>
+    <com.youth.banner.Banner
+        android:id="@+id/mybanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    </com.youth.banner.Banner>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/jg_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.jwenfeng.library.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/jz_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    </com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>
+
+
+
+</LinearLayout>
+</ScrollView>
